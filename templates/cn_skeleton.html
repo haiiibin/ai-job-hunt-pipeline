@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{姓名}} 中文简历</title>
+  <style>
+    /* ========== LOCKED -- DO NOT MODIFY THIS STYLE BLOCK ========== */
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'SimSun', 'NSimSun', '宋体', serif;
+      font-size: 9.5pt;
+      color: #1a1a1a;
+      line-height: 1.38;
+    }
+
+    @page {
+      size: A4;
+      margin: 0.3cm 1.06cm 0.45cm 1.06cm;
+    }
+
+    /* ---- Header: 3-column so name is centered over full page width ---- */
+    .header {
+      display: grid;
+      grid-template-columns: 2.6cm 1fr 2.6cm;
+      align-items: start;
+      margin-bottom: -14pt;
+    }
+    .header-spacer { /* empty balancing column -- same width as photo */ }
+    .header-center { text-align: center; }
+    .header-name {
+      font-size: 18pt;
+      font-weight: bold;
+      letter-spacing: 2pt;
+      margin-bottom: 2pt;
+    }
+    .header-contact {
+      font-size: 8.5pt;
+      color: #333;
+    }
+    .header-photo {
+      width: 2.6cm;
+      height: 3.3cm;
+      overflow: hidden;
+      justify-self: end;
+      align-self: start;
+    }
+    .header-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ---- Section headings ---- */
+    h2 {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #1a1a1a;
+      border-bottom: 1.2pt solid #1a1a1a;
+      margin-top: 5pt;
+      margin-bottom: 2pt;
+      padding-bottom: 1pt;
+    }
+
+    /* ---- Job / entry heading (3-column grid) ---- */
+    .job-heading {
+      display: grid;
+      grid-template-columns: 2fr 1.25fr 1fr;
+      font-weight: bold;
+      font-size: 9.5pt;
+      margin-bottom: 0.5pt;
+    }
+    .job-left  { text-align: left; }
+    .job-center { text-align: center; }
+    .job-right { text-align: right; font-size: 8.5pt; }
+
+    /* ---- Course line (education section) ---- */
+    .course-line { font-size: 8.5pt; color: #333; margin-bottom: 0.5pt; }
+
+    /* ---- Location line ---- */
+    .location-line { font-size: 8.5pt; color: #555; margin-bottom: 1pt; }
+
+    /* ---- Bullets ---- */
+    ul.bullets {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul.bullets li {
+      padding-left: 1em;
+      text-indent: -1em;
+      margin-bottom: 1.5pt;
+      font-size: 9pt;
+    }
+    ul.bullets li::before {
+      content: "● ";
+      color: #1a1a1a;
+      font-size: 7pt;
+      vertical-align: baseline;
+    }
+
+    /* ---- Spacing ---- */
+    .job-entry { margin-bottom: 4pt; }
+    .section { margin-bottom: 2pt; }
+
+    @media print {
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    /* ========== END LOCKED STYLE BLOCK ========== */
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <!-- 3-column: left spacer (=photo width) | center name+contact | right photo -->
+  <!-- 互联网/数据岗联系方式格式: 手机：{{手机号}} | 邮箱：{{邮箱}} | GitHub：github.com/{{GITHUB_ID}} -->
+  <!-- 其他岗位: {{手机号}}|{{邮箱}}（竖线两侧无空格） -->
+  <div class="header">
+    <div class="header-spacer"></div>
+    <div class="header-center">
+      <div class="header-name">{{姓名}}</div>
+      <div class="header-contact">{{手机号}}|{{邮箱}}</div>
+    </div>
+    <div class="header-photo">
+      <img src="../../photo.jpg" alt="photo">
+    </div>
+  </div>
+
+  <!-- ===== 教育背景（首次填好后即锁定，所有岗位版本保持一致） ===== -->
+  <!-- job-right 用 毕业时间:YYYY年MM月（半角冒号），只放日期不加城市 -->
+  <h2>教育背景</h2>
+  <div class="section">
+    <div class="job-entry">
+      <div class="job-heading">
+        <span class="job-left">{{最高学历院校}}</span>
+        <span class="job-center">{{专业}}-{{学位层次}}</span>
+        <span class="job-right">毕业时间:{{毕业年月}}</span>
+      </div>
+      <ul class="bullets">
+        <li>{{GPA、证书、语言成绩等亮点，单行}}</li>
+      </ul>
+    </div>
+    <div class="job-entry">
+      <div class="job-heading">
+        <span class="job-left">{{本科院校}}</span>
+        <span class="job-center">{{专业}}-本科</span>
+        <span class="job-right">毕业时间:{{毕业年月}}</span>
+      </div>
+      <ul class="bullets">
+        <li>{{GPA、辅修等，单行}}</li>
+        <li>主修课程：{{课程（成绩）、课程（成绩）……按岗位方向选列}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 实习经历 ===== -->
+  <h2>实习经历</h2>
+  <div class="section">
+    <!-- INSERT WORK EXPERIENCE ENTRIES HERE -->
+    <!-- Bullet format with bold topic: <li><strong>主题：</strong>描述文字</li> -->
+    <!-- 可选经历（如仅金融岗才放的实习）: 按 JD 类型决定是否保留对应 job-entry 块 -->
+    <!--
+    <div class="job-entry">
+      <div class="job-heading">
+        <span class="job-left">公司名（English Name）</span>
+        <span class="job-center">职位名称</span>
+        <span class="job-right">2025年12月–至今</span>
+      </div>
+      <ul class="bullets">
+        <li><strong>主题：</strong>描述</li>
+        <li><strong>主题：</strong>描述</li>
+      </ul>
+    </div>
+    -->
+  </div>
+
+  <!-- ===== 第三章节 ===== -->
+  <!-- SECTION3_TITLE: replace "商赛经历" with 项目经历 or 竞赛经历 as appropriate -->
+  <!-- 咨询/管培 → 商赛经历 | 互联网/数据 → 项目经历 | 数据工程 → 竞赛经历 -->
+  <h2>商赛经历</h2>
+  <div class="section">
+    <!-- INSERT SECTION3 ENTRIES HERE -->
+    <!-- 商赛经历 role: 项目负责人 | 项目经历 role: Participant -->
+  </div>
+
+  <!-- ===== 技能 ===== -->
+  <h2>技能</h2>
+  <div class="section">
+    <!-- INSERT SKILLS HERE using ul.bullets (same style as body bullets) -->
+    <!--
+    <ul class="bullets">
+      <li><strong>分析与决策工具：</strong>Python、SQL、Excel（高级财务建模、数据透视表）、Power BI、Tableau、统计分析</li>
+    </ul>
+    -->
+  </div>
+
+</body>
+</html>

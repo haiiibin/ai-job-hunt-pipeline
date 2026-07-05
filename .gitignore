@@ -1,0 +1,21 @@
+# personal data -- bring your own, never commit
+resume-data/
+pipeline/jobs.yaml
+pipeline/profile.yaml
+pipeline/watchlist.md
+output/
+photo.jpg
+.mcp.json
+.playwright-mcp/
+.playwright-profile/
+
+# build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+*.pdf
+__pycache__/

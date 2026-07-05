@@ -1,0 +1,94 @@
+% Fill every {{PLACEHOLDER}} and [bracket placeholder] before compiling.
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% Font
+\setmainfont{Times New Roman}
+
+% Hyperlinks
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% Spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% Bullet style: DO NOT change itemsep/topsep values
+\setlist[itemize]{
+  leftmargin = 1.5em,
+  itemsep    = 4pt,
+  parsep     = 0pt,
+  topsep     = 2pt,
+  label      = \textbullet
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% -- HEADER --
+\begin{center}
+  {\Large\bfseries {{FULL_NAME}}}\\[2pt]
+  {\small\href{https://linkedin.com/in/{{LINKEDIN_ID}}}{linkedin.com/in/{{LINKEDIN_ID}}}}
+\end{center}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{2pt}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+  {{STREET_ADDRESS}}     & {{PHONE}} \\
+  {{CITY_PROVINCE_COUNTRY}}   & {{EMAIL}} \\
+\end{tabularx}
+
+\vspace{10pt}
+
+[Month Dayth, Year]
+
+\vspace{6pt}
+
+[Hiring Manager Name], [Title]\\
+[Company Name]\\
+[Street Address]\\
+[City, Province, Postal Code]
+
+\vspace{6pt}
+
+RE: [Exact Job Title] Position
+
+\vspace{6pt}
+
+Dear [Ms./Mr. Last Name],
+
+% Opening paragraph: max 70 words.
+% Must include: specific research-based company detail; clear direct statement of intent
+% to join THIS company and THIS role; brief background (one line).
+[Opening paragraph]
+
+\begin{itemize}
+
+  % Each bullet: bolded topic + double dash ( -- ) + STAR content. Max 55 words each.
+  % Use experiences from your resume-data/ files NOT already featured prominently in the CV.
+  % NO em dashes anywhere; use double dash ( -- ) for topic separator only.
+  \item \textbf{[Key Skill / Qualification 1] --} [STAR: Situation, Action, quantified Result.]
+
+  \item \textbf{[Key Skill / Qualification 2] --} [STAR: Situation, Action, quantified Result.]
+
+  \item \textbf{[Key Skill / Qualification 3] --} [STAR: Situation, Action, quantified Result.]
+
+\end{itemize}
+
+% Closing paragraph: max 50 words. Reaffirm specific desire to join this company and role.
+[Closing paragraph]
+
+\vspace{10pt}
+
+Sincerely,\\
+{{FULL_NAME}}\\
+{{DEGREE}}~$|$~{{UNIVERSITY}}
+
+\end{document}

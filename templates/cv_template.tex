@@ -1,0 +1,158 @@
+% Fill every {{PLACEHOLDER}} and [bracket placeholder] before compiling.
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks,pdftex]{hyperref}
+\usepackage{geometry}
+
+% ---------- Page Layout ----------
+\geometry{top=0.45in, bottom=0.45in, left=0.55in, right=0.55in}
+\raggedright \raggedbottom
+\setlength{\tabcolsep}{0in}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+
+% ---------- Section Format ----------
+\titleformat{\section}
+  {\bfseries\large\raggedright}
+  {}{0em}{\uppercase}[\vspace{1pt}\hrule height 0.5pt\vspace{2pt}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+% ---------- Commands ----------
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1}\vspace{1pt}
+}
+
+\newcommand{\resumeEduHeading}[4]{%
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeJobHeading}[4]{%
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=0.15in, itemsep=0pt, topsep=3pt, parsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{%
+  \end{itemize}\vspace{1pt}
+}
+
+% ============================================================
+\begin{document}
+
+% ---- HEADER ------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries {{FULL_NAME}}}\\[4pt]
+  \small
+  E-mail: \href{mailto:{{EMAIL}}}{{{EMAIL}}}
+  ~$|$~ Tel: {{PHONE}}
+  ~$|$~ LinkedIn: \href{https://linkedin.com/in/{{LINKEDIN_ID}}}{linkedin.com/in/{{LINKEDIN_ID}}}
+  ~$|$~ GitHub: \href{https://github.com/{{GITHUB_ID}}}{github.com/{{GITHUB_ID}}}
+\end{center}
+\vspace{-6pt}
+
+% ---- EDUCATION ---------------------------------------------
+\section{Education}
+
+% List degrees in reverse chronological order (most recent first).
+\resumeEduHeading
+  {[University Name] $|$ [School / Faculty]
+   \normalfont\textit{(GPA: [X.X/X.X])}}
+  {[City, Country]}
+  {[Degree, e.g. Master of ...]}
+  {[Start] -- [End]}
+\resumeItemListStart
+  \resumeItem{\textbf{Relevant Courses:} [Course (grade), Course (grade), ...]}
+\resumeItemListEnd
+
+\resumeEduHeading
+  {[University Name] $|$ [School / Faculty]
+   \normalfont\textit{(GPA: [X.X/X.X])}}
+  {[City, Country]}
+  {[Degree, e.g. Bachelor of ..., honours if any]}
+  {[Start] -- [End]}
+\resumeItemListStart
+  \resumeItem{\textbf{Relevant Courses:} [Course (grade), Course (grade), ...]}
+\resumeItemListEnd
+
+% ---- PROFESSIONAL EXPERIENCE --------------------------------
+\section{Professional Experience}
+
+% List employers in reverse chronological order (most recent first).
+% 2-3 quantified bullets per entry; keep the whole CV to a single page.
+\resumeJobHeading
+  {[Most Recent Employer]}{[City, Country]}
+  {[Role Title]}{[Start] -- Present}
+\resumeItemListStart
+  \resumeItem{[Tailored bullet 1 -- quantified, JD-aligned, max 40 words]}
+  \resumeItem{[Tailored bullet 2 -- quantified, JD-aligned, max 40 words]}
+\resumeItemListEnd
+
+\resumeJobHeading
+  {[Employer 2]}{[City, Country]}
+  {[Role Title]}{[Start] -- [End]}
+\resumeItemListStart
+  \resumeItem{[Tailored bullet 1 -- quantified, JD-aligned, max 40 words]}
+  \resumeItem{[Tailored bullet 2 -- quantified, JD-aligned, max 40 words]}
+\resumeItemListEnd
+
+\resumeJobHeading
+  {[Employer 3]}{[City, Country]}
+  {[Role Title]}{[Start] -- [End]}
+\resumeItemListStart
+  \resumeItem{[Tailored bullet 1 -- quantified, JD-aligned, max 40 words]}
+  \resumeItem{[Tailored bullet 2 -- quantified, JD-aligned, max 40 words]}
+\resumeItemListEnd
+
+\resumeJobHeading
+  {[Employer 4]}{[City, Country]}
+  {[Role Title]}{[Start] -- [End]}
+\resumeItemListStart
+  \resumeItem{[Tailored bullet 1 -- quantified, JD-aligned, max 40 words]}
+  \resumeItem{[Tailored bullet 2 -- quantified, JD-aligned, max 40 words]}
+\resumeItemListEnd
+
+% --- Optional entry: include only when directly relevant to the target role ---
+% \resumeJobHeading
+%   {[Optional Employer]}{[City, Country]}
+%   {[Role]}{[Dates]}
+% \resumeItemListStart
+%   \resumeItem{[Bullet 1]}
+%   \resumeItem{[Bullet 2]}
+% \resumeItemListEnd
+
+% ---- EXTRACURRICULAR / PROJECTS ----------------------------
+\section{Extracurricular}
+
+\resumeJobHeading
+  {[Activity / Project Name]}{[Location]}
+  {Participant -- [Achievement e.g. Top 5 of 48 teams]}{[Date]}
+\resumeItemListStart
+  \resumeItem{[One sentence description with quantified outcome]}
+\resumeItemListEnd
+
+% Add more entries as space allows -- fill the page.
+% All extracurricular entries MUST use "Participant" as role title.
+
+% ---- SKILLS ------------------------------------------------
+\section{Skills}
+
+\resumeItemListStart
+  \resumeItem{\textbf{[Skill Category 1]:} [skill, skill, skill, ...]}
+  \resumeItem{\textbf{[Skill Category 2]:} [skill, skill, skill, ...]}
+  \resumeItem{\textbf{[Skill Category 3]:} [skill, skill, skill, ...]}
+  \resumeItem{\textbf{[Skill Category 4]:} [skill, skill, skill, ...]}
+  \resumeItem{\textbf{Certifications \& Languages:} [certification(s)];\
+    [language proficiencies]}
+\resumeItemListEnd
+
+\end{document}
