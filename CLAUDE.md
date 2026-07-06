@@ -61,13 +61,13 @@ resume-data/
 ```yaml
 experiences:
   - file: experience/company-a.md
-    tags: [data, analytics, sql]     # 与 JD 匹配用
+    tags: [structural, site-supervision, autocad]   # 与 JD 匹配用
     priority: required               # required=每份简历必选 / optional=按条件选
     condition: ""                    # optional 时的选取条件(如"仅金融岗")
     date_range: "2025-12 ~ present"
 projects:
   - file: projects/project-x.md
-    tags: [ml, visualization]
+    tags: [bridge-design, cost-estimation]
     date_range: "2025-03"
 ```
 

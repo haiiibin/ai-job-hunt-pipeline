@@ -141,13 +141,13 @@ resume-data/
 ```yaml
 experiences:
   - file: experience/company-a.md
-    tags: [data, analytics, sql]     # matched against the JD
+    tags: [structural, site-supervision, autocad]   # matched against the JD
     priority: required               # required = every resume / optional = conditional
     condition: ""                    # selection rule when optional (e.g. "finance roles only")
     date_range: "2024-12 ~ present"
 projects:
   - file: projects/project-x.md
-    tags: [ml, visualization]
+    tags: [bridge-design, cost-estimation]
     date_range: "2024-03"
 ```
 
@@ -169,13 +169,13 @@ social:
 education:
   - school: Example University
     degree: 硕士                 # degree level
-    major: Data Science
+    major: Structural Engineering
     start: "2022-09"
     end: "2023-12"
     gpa: "0.0/4.0"
   - school: Example College
     degree: 本科
-    major: Statistics
+    major: Civil Engineering
     start: "2017-09"
     end: "2021-06"
     gpa: "0.0/4.0"
