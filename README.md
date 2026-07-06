@@ -18,6 +18,10 @@ The command files are written in Chinese on purpose: this pipeline targets Chine
 portals (Nowcoder, Zhilian, Boss, and the campus sites of Tencent, ByteDance, Alibaba,
 Meituan, JD). The workflow logic below is language-agnostic and documented in English here.
 
+Applying in North America instead? Use the leaner sibling,
+[ai-job-hunt-pipeline-na](https://github.com/haiiibin/ai-job-hunt-pipeline-na):
+same scoring rubric and LaTeX pipeline, English workflow spec, no portal autofill.
+
 ## Why this exists
 
 Applying at scale is a volume game, but most of that volume is repetitive form-filling that
